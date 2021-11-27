@@ -1,4 +1,3 @@
-from pprint import pprint
 import re
 import csv
 
@@ -27,26 +26,7 @@ for item in fio_list:
             break
     if not itemExist:
         uniqueFio.append(item)
-# print(uniqueFio)
 
 with open("phonebook.csv", "w") as f:
     datawriter = csv.writer(f, delimiter=',')
-#     # Вместо contacts_list подставьте свой список
     datawriter.writerows(uniqueFio)
-# with open('example.txt', 'w+', encoding='utf-8') as f:
-#     f.write(str(uniqueFio))
-
-
-    # fio_dict['lastname'] = fio[0]
-    # fio_dict['firstname'] = fio[1]
-    # fio_dict['surname'] = fio[2]
-    # fio_dict['organization'] = fio[3]
-    # fio_dict['position'] = fio[4]
-    # fio_dict['phone'] = fio[5]
-    # fio_dict['email'] = fio[6]
-    # print(fio_dict)
-
-# with open("phonebook.csv", "w") as f:
-#     datawriter = csv.writer(f, delimiter=',')
-#     # Вместо contacts_list подставьте свой список
-#     datawriter.writerows(fio)
